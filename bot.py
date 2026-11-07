@@ -14,11 +14,34 @@ from maxapi.types import MessageCreated, BotStarted
 
 logging.basicConfig(level=logging.INFO)
 
-BOT_TOKEN = os.getenv("MAX_BOT_TOKEN", "БОТ ТОКЕН МАКС")
-API_CREDENTIALS = os.getenv(
-    "GIGACHAT_CREDENTIALS",
-    "БОТ ТОКЕН ГИГА ЧАТ",
+
+config_path = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "configuration",
+    "config.txt"
 )
+
+config = {}
+
+with open(config_path, "r", encoding="utf-8-sig") as file:
+    for line in file:
+        line = line.strip()
+
+        if not line or line.startswith("#"):
+            continue
+
+        key, value = line.split("=", 1)
+        config[key.strip()] = value.strip()
+
+BOT_TOKEN = config["MAX_BOT_TOKEN"]
+API_CREDENTIALS = config["GIGACHAT_CREDENTIALS"]
+
+
+# BOT_TOKEN = os.getenv("MAX_BOT_TOKEN", "БОТ ТОКЕН МАКС")
+# API_CREDENTIALS = os.getenv(
+#     "GIGACHAT_CREDENTIALS",
+#     "БОТ ТОКЕН ГИГА ЧАТ",
+# )
 
 DATA_FILE = "rostov.json"
 MODEL = "GigaChat-3-Ultra"

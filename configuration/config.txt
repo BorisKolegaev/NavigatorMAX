@@ -1,0 +1,2 @@
+MAX_BOT_TOKEN=ВСТАВИТЬ_ТОКЕН_МАКС
+GIGACHAT_CREDENTIALS=ВСТАВИТЬ_ТОКЕН_ГИГАЧАТ

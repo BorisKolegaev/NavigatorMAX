@@ -1,0 +1,2 @@
+MAX_BOT_TOKEN=сюда_токен_бота_MAX
+GIGACHAT_CREDENTIALS=сюда_ключ_GigaChat

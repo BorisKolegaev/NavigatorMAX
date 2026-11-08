@@ -11,6 +11,7 @@ NavigatorMAX — чат-бот для поиска программ дополн
 **Текущий пилот:** Ростовская область → Ростов-на-Дону. Архитектура предусматривает подключение других муниципалитетов и регионов.
 
 Готовый Docker-образ: [Docker Hub](https://hub.docker.com/r/boriskolegaev/navigatormax).
+docker run -d --init --name navigatormax --restart unless-stopped boriskolegaev/navigatormax:demo
 
 [Возможности](#возможности) · [Архитектура](#как-работает-rag) · [Запуск](#запуск) · [Масштабирование](#масштабирование-на-другие-регионы)
 

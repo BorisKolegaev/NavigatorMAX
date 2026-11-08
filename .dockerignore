@@ -1,0 +1,7 @@
+# The database and configuration are deliberately included in the image.
+.git
+.venv
+venv
+**/__pycache__
+**/*.pyc
+**/*.pyo
